@@ -1,0 +1,270 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MayBi Estética & Saúde | Guarujá</title>
+<meta name="description" content="Clínica MayBi Estética & Saúde, no Guarujá. Estética, saúde e autoestima.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --vinho:#5a1426;      /* vermelho-vinho dos posts da marca */
+  --vinho-2:#3d0c19;
+  --rosa:#f6dde0;       /* rosé dos destaques do perfil */
+  --rosa-2:#ecc3c9;
+  --creme:#fbf5ef;
+  --dourado:#b98a52;
+  --texto:#3a2228;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Jost',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);font-weight:300;color:var(--texto);background:var(--creme);line-height:1.7;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{position:fixed;inset:0 0 auto 0;z-index:20;transition:.4s;padding:18px 0}
+header.solid{background:rgba(251,245,239,.94);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(90,20,38,.1);padding:10px 0}
+header .wrap{display:flex;justify-content:space-between;align-items:center}
+.logo{display:flex;align-items:center;gap:12px;color:#fff;transition:.4s}
+header.solid .logo{color:var(--vinho)}
+.mono{font-family:var(--serif);font-size:26px;font-weight:500;width:46px;height:46px;border:1px solid currentColor;border-radius:50%;display:grid;place-items:center;letter-spacing:-1px}
+.logo b{font-family:var(--serif);font-weight:500;font-size:22px;letter-spacing:.22em;display:block;line-height:1}
+.logo small{font-size:10px;letter-spacing:.3em;text-transform:uppercase;opacity:.85}
+nav{display:flex;gap:30px;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:#fff;transition:.4s}
+header.solid nav{color:var(--vinho)}
+nav a:hover{opacity:.6}
+
+/* hero */
+.hero{min-height:100vh;background:var(--vinho-2);color:#fff;position:relative;display:grid;grid-template-columns:1.05fr 1fr;overflow:hidden}
+.hero-text{padding:150px 6vw 80px 8vw;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:2}
+.eyebrow{font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--rosa-2);margin-bottom:28px;display:flex;align-items:center;gap:14px}
+.eyebrow::before{content:"";width:40px;height:1px;background:var(--dourado)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(46px,6.2vw,92px);line-height:1;letter-spacing:-.01em}
+h1 em{font-style:italic;color:var(--rosa-2)}
+.hero p{max-width:420px;margin:30px 0 40px;font-size:17px;color:#f0dcdf}
+.btns{display:flex;gap:16px;flex-wrap:wrap}
+.btn{display:inline-block;padding:16px 34px;font-size:13px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--rosa);transition:.3s;font-weight:400}
+.btn.fill{background:var(--rosa);color:var(--vinho)}
+.btn.fill:hover{background:#fff}
+.btn.line{color:#fff}
+.btn.line:hover{background:rgba(255,255,255,.12)}
+.hero-img{position:relative;min-height:420px}
+.hero-img::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,var(--vinho-2) 0%,transparent 30%)}
+.hero-sign{position:absolute;bottom:34px;left:8vw;z-index:2;font-size:12px;letter-spacing:.2em;color:var(--rosa-2);text-transform:uppercase}
+
+/* foto / placeholder */
+.ph{position:relative;background:var(--rosa);overflow:hidden;display:grid;place-items:center}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ph .tag{font-family:var(--serif);font-style:italic;font-size:22px;color:var(--vinho);text-align:center;padding:20px;opacity:.85}
+.ph .tag small{display:block;font-family:var(--sans);font-style:normal;font-size:10px;letter-spacing:.25em;text-transform:uppercase;margin-top:8px;opacity:.7}
+.ph .tag.mb{font-style:normal;font-size:44px;letter-spacing:-2px;opacity:.35}.ph.dark{background:var(--vinho)}
+.ph.dark .tag{color:var(--rosa)}
+.ph.mid{background:var(--rosa-2)}
+.hero-img.ph{background:linear-gradient(160deg,#7a1e36,#3d0c19)}
+.hero-img .tag{color:var(--rosa)}
+
+section{padding:120px 0}
+.kicker{font-size:12px;letter-spacing:.35em;text-transform:uppercase;color:var(--dourado);margin-bottom:18px}
+h2{font-family:var(--serif);font-weight:400;font-size:clamp(36px,4.4vw,60px);line-height:1.05;color:var(--vinho)}
+h2 em{font-style:italic}
+
+/* tratamentos: lista editorial */
+.trat-head{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:end;margin-bottom:70px}
+.trat-head p{max-width:460px}
+.trat{display:grid;grid-template-columns:repeat(6,1fr);gap:22px}
+.t{grid-column:span 2}
+.t.big{grid-column:span 3}
+.t .ph{aspect-ratio:4/5}
+.t.big .ph{aspect-ratio:5/4}
+.t h3{font-family:var(--serif);font-weight:500;font-size:28px;color:var(--vinho);margin:18px 0 4px;line-height:1.1}
+.t p{font-size:15px;color:#6b4a52}
+.t span.n{font-family:var(--serif);font-style:italic;color:var(--dourado);font-size:16px}
+.t .ph img{transition:transform .8s}
+.t:hover .ph img{transform:scale(1.05)}
+
+/* sobre */
+.sobre{background:var(--vinho);color:#f3dfe2}
+.sobre .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:80px;align-items:center}
+.sobre h2{color:#fff}
+.sobre .kicker{color:var(--rosa-2)}
+.sobre p{margin-top:22px;font-size:17px;max-width:520px}
+.sobre .ph{aspect-ratio:4/5;border:1px solid var(--dourado);outline:10px solid var(--vinho);outline-offset:-1px}
+.equipe{margin-top:36px;border-top:1px solid rgba(255,255,255,.2);padding-top:24px;display:grid;gap:14px}
+.equipe div{font-family:var(--serif);font-size:22px;color:#fff;line-height:1.2}
+.equipe small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--rosa-2)}
+
+/* galeria */
+.gal{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:14px;margin-top:56px}
+.gal .ph:nth-child(1){grid-row:span 2}
+.gal .ph:nth-child(4){grid-column:span 2}
+.gal .ph:nth-child(6){grid-row:span 2}
+.nota{font-size:13px;color:#8b6a72;margin-top:18px;font-style:italic}
+
+/* contato */
+.contato{background:var(--rosa);text-align:center;padding:130px 0}
+.contato h2{max-width:720px;margin:0 auto}
+.contato p{max-width:480px;margin:24px auto 40px}
+.btn.wine{background:var(--vinho);color:#fff;border-color:var(--vinho)}
+.btn.wine:hover{background:var(--vinho-2)}
+.btn.out{color:var(--vinho);border-color:var(--vinho)}
+.btn.out:hover{background:rgba(90,20,38,.08)}
+.local{margin-top:46px;font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--vinho)}
+
+footer{background:var(--vinho-2);color:#d9bcc1;padding:44px 0;font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center}
+footer .reg{opacity:.7;font-size:12px}
+
+/* animação */
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s ease,transform 1s ease}
+.rv.in{opacity:1;transform:none}
+.hero-text>*{animation:up 1s both}
+.hero-text>*:nth-child(2){animation-delay:.15s}.hero-text>*:nth-child(3){animation-delay:.3s}.hero-text>*:nth-child(4){animation-delay:.45s}
+@keyframes up{from{opacity:0;transform:translateY(24px)}}
+@media (prefers-reduced-motion:reduce){.rv,.hero-text>*{animation:none;transition:none;opacity:1;transform:none}}
+
+@media(max-width:900px){
+  nav{display:none}
+  .hero{grid-template-columns:1fr;grid-template-rows:42vh auto}
+  .hero-img{order:-1;min-height:0}
+  .hero-img::after{background:linear-gradient(0deg,var(--vinho-2),transparent 40%)}
+  .hero-text{padding:30px 24px 70px}
+  .hero-sign{display:none}
+  section{padding:80px 0}
+  .trat-head,.sobre .grid{grid-template-columns:1fr;gap:30px}
+  .trat{grid-template-columns:1fr 1fr}
+  .t,.t.big{grid-column:span 1}
+  .t.big{grid-column:span 2}
+  .t h3{font-size:22px}
+  .gal{grid-template-columns:1fr 1fr;grid-auto-rows:170px}
+  .gal .ph:nth-child(4){grid-column:span 2}
+  .contato{padding:90px 0}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap">
+    <a href="#inicio" class="logo">
+      <span class="mono">MB</span>
+      <span><b>MAYBI</b><small>Estética &amp; Saúde</small></span>
+    </a>
+    <nav>
+      <a href="#tratamentos">Tratamentos</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="inicio" style="padding:0">
+  <div class="hero-text">
+    <div class="eyebrow">Guarujá · São Paulo</div>
+    <h1>Estética, saúde<br>e <em>autoestima.</em></h1>
+    <p>Cuidado com a pele, o corpo e o bem-estar, feito com atenção por quem entende de saúde.</p>
+    <div class="btns">
+      <a class="btn fill" href="#tratamentos">Conheça nossos tratamentos</a>
+      <a class="btn line" href="#contato">Fale conosco</a>
+    </div>
+  </div>
+  <div class="hero-img ph">
+    <img src="img/hero.jpg" alt="Equipe da Clínica MayBi" onerror="this.remove()">
+    <div class="tag mb">MB</div>
+  </div>
+  <div class="hero-sign">Dra. Beatriz Alves &nbsp;·&nbsp; Dra. Mayene El Barouki</div>
+</section>
+
+<section id="tratamentos">
+  <div class="wrap">
+    <div class="trat-head rv">
+      <div>
+        <div class="kicker">Tratamentos</div>
+        <h2>Cada cuidado, <em>no seu tempo.</em></h2>
+      </div>
+      <p>Alguns dos procedimentos que a clínica apresenta no dia a dia. A avaliação define o que é indicado para cada pessoa.</p>
+    </div>
+    <div class="trat">
+      <article class="t big rv"><div class="ph dark"><img src="img/agulhamento.jpg" alt="" onerror="this.remove()"><div class="tag">Agulhamento</div></div>
+        <span class="n">01</span><h3>Agulhamento</h3><p>Técnica aplicada pela equipe da clínica para dores e tratamentos específicos.</p></article>
+      <article class="t big rv"><div class="ph"><img src="img/face.jpg" alt="" onerror="this.remove()"><div class="tag">Face e Pescoço</div></div>
+        <span class="n">02</span><h3>Face e Pescoço</h3><p>Protocolos voltados ao cuidado e à renovação da pele do rosto e do pescoço.</p></article>
+      <article class="t rv"><div class="ph mid"><img src="img/massoterapia.jpg" alt="" onerror="this.remove()"><div class="tag">Massoterapia</div></div>
+        <span class="n">03</span><h3>Massoterapia</h3><p>Momento de relaxamento e alívio de tensões.</p></article>
+      <article class="t rv"><div class="ph dark"><img src="img/ventosaterapia.jpg" alt="" onerror="this.remove()"><div class="tag">Ventosaterapia</div></div>
+        <span class="n">04</span><h3>Ventosaterapia</h3><p>Terapia corporal realizada com a profissional Lilian Mendonça.</p></article>
+      <article class="t rv"><div class="ph"><img src="img/lipo.jpg" alt="" onerror="this.remove()"><div class="tag">Lipo Enzimática</div></div>
+        <span class="n">05</span><h3>Lipo Enzimática</h3><p>Tratamento corporal com avaliação individual.</p></article>
+      <article class="t rv"><div class="ph mid"><img src="img/capilar.jpg" alt="" onerror="this.remove()"><div class="tag">Capilar</div></div>
+        <span class="n">06</span><h3>Capilar</h3><p>Cuidados voltados à saúde do couro cabeludo e dos fios.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sobre" id="sobre">
+  <div class="wrap grid">
+    <div class="rv">
+      <div class="kicker">Sobre a MayBi</div>
+      <h2>Saúde e beleza <em>caminham juntas.</em></h2>
+      <p>A MayBi Estética &amp; Saúde é uma clínica no Guarujá que une estética, saúde e autoestima. Aqui, cada atendimento começa pela escuta e é conduzido por profissionais da área da saúde.</p>
+      <div class="equipe">
+        <div>Dra. Beatriz Alves<small>Enfermeira · Coren 761892</small></div>
+        <div>Dra. Mayene Pongeluppe El Barouki<small>Médica · CRM 288462</small></div>
+      </div>
+    </div>
+    <div class="ph dark rv"><img src="img/sobre.jpg" alt="" onerror="this.remove()"><div class="tag mb">MB</div></div>
+  </div>
+</section>
+
+<section id="galeria">
+  <div class="wrap">
+    <div class="rv"><div class="kicker">Galeria</div><h2>A MayBi <em>por dentro.</em></h2></div>
+    <div class="gal rv">
+      <div class="ph dark"><img src="img/g1.jpg" alt="" onerror="this.remove()"><div class="tag mb">MB</div></div>
+      <div class="ph"><img src="img/g2.jpg" alt="" onerror="this.remove()"><div class="tag mb">MB</div></div>
+      <div class="ph mid"><img src="img/g3.jpg" alt="" onerror="this.remove()"><div class="tag mb">MB</div></div>
+      <div class="ph dark"><img src="img/g4.jpg" alt="" onerror="this.remove()"><div class="tag mb">MB</div></div>
+      <div class="ph mid"><img src="img/g5.jpg" alt="" onerror="this.remove()"><div class="tag mb">MB</div></div>
+      <div class="ph"><img src="img/g6.jpg" alt="" onerror="this.remove()"><div class="tag mb">MB</div></div>
+      <div class="ph dark"><img src="img/g7.jpg" alt="" onerror="this.remove()"><div class="tag mb">MB</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="contato" id="contato">
+  <div class="wrap rv">
+    <div class="kicker">Contato</div>
+    <h2>Vamos cuidar de você com <em>carinho.</em></h2>
+    <p>Venha conhecer a clínica e conversar com a nossa equipe sobre o tratamento ideal para você.</p>
+    <div class="btns" style="justify-content:center">
+      <a class="btn wine" href="https://www.instagram.com/maybi.estetica/" target="_blank" rel="noopener">Chamar no Instagram</a>
+      <a class="btn out" href="#tratamentos">Ver tratamentos</a>
+    </div>
+    <div class="local">Guarujá · São Paulo</div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>© MayBi Estética &amp; Saúde · Guarujá/SP</div>
+    <div class="reg">Dra. Beatriz Alves (Coren 761892) · Dra. Mayene P. El Barouki (CRM 288462)</div>
+    <a href="https://www.instagram.com/maybi.estetica/" target="_blank" rel="noopener">@maybi.estetica</a>
+  </div>
+</footer>
+
+<script>
+const h=document.getElementById('top');
+const onS=()=>h.classList.toggle('solid',scrollY>60);
+onS();addEventListener('scroll',onS,{passive:true});
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
+
